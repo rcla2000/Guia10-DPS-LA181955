@@ -28,7 +28,7 @@ export default function AddBirthday(props) {
         setIsDatePickerVisible(true);
     }
 
-    const handleConfirm = (date) => {
+    const handlerConfirm = (date) => {
         const dateBirth = date;
         dateBirth.setHours(0);
         dateBirth.setMinutes(0);
@@ -62,7 +62,8 @@ export default function AddBirthday(props) {
                 });
         }
         setFormError(errors);
-    }
+        console.log('Presionado');
+    };
 
     return (
         <>
@@ -102,7 +103,7 @@ export default function AddBirthday(props) {
                 </TouchableOpacity>
             </View>
             <DateTimePickerModal
-                isVisible={isDatePicketVisible}
+                isVisible={isDatePickerVisible}
                 mode="date"
                 onConfirm={handlerConfirm}
                 onCancel={hideDatePicker}
